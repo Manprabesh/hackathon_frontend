@@ -40,18 +40,13 @@ const LoginScreen = () => {
         return;
       }
 
-      console.log('User logged in', data);
+
       
       // Store token in localStorage
       localStorage.setItem('access_token', data.access_token);
       const token = localStorage.getItem('acce  ss_token');
-      console.log('Getting token', token);
+    //   console.log('Getting token', token);
 
-      // Fetch user profile
-    //   await fetchProfileDetails(token);
-
-      // Redirect to home page
-    //   window.location.href = '/chat';
     navigate('/chat')
       
     } catch (error) {
