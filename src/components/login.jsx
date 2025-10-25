@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { GraduationCap } from 'lucide-react';
+import { useNavigate } from 'react-router';
 
 const LoginScreen = () => {
+    const navigate = useNavigate();
   const [form, setForm] = useState({
     email: '',
     password: '',
@@ -49,7 +51,8 @@ const LoginScreen = () => {
     //   await fetchProfileDetails(token);
 
       // Redirect to home page
-      window.location.href = '/chat';
+    //   window.location.href = '/chat';
+    navigate('/chat')
       
     } catch (error) {
       console.error('Login error:', error);
